@@ -1,0 +1,24 @@
+
+<mat-card class="register-container">
+  <h2>Đăng Ký</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Họ và Tên</mat-label>
+      <input matInput formControlName="fullName" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Số điện thoạ</mat-label>
+      <input matInput formControlName="phoneNumber" type="text" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Mật khẩu</mat-label>
+      <input matInput formControlName="password" type="password" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Đăng Ký</button>
+  </form>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  <p>Đã có tài khoản? <a routerLink="/login">Đăng nhập</a></p>
+</mat-card>
+

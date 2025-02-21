@@ -1,0 +1,106 @@
+<mat-card class="order-card">
+  <mat-card-title>Tạo Đơn Hàng</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="orderForm" (ngSubmit)="createOrder()">
+      <div class="section">
+        <h3>Người Gửi</h3>
+        <div class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Họ Tên</mat-label>
+            <input matInput type="text" formControlName="senderName" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Số Điện Thoại</mat-label>
+            <input matInput type="text" formControlName="senderPhoneNumber" required />
+          </mat-form-field>
+        </div>
+
+        <div formGroupName="senderAddress" class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Tỉnh</mat-label>
+            <input matInput type="text" formControlName="province" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Quận/Huyện</mat-label>
+            <input matInput type="text" formControlName="district" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phường/Xã</mat-label>
+            <input matInput type="text" formControlName="ward" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Địa chỉ chi tiết</mat-label>
+            <input matInput type="text" formControlName="detailedAddress" required />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Người Nhận</h3>
+        <div class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Họ Tên</mat-label>
+            <input matInput type="text" formControlName="receiverName" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Số Điện Thoại</mat-label>
+            <input matInput type="text" formControlName="receiverPhoneNumber" required />
+          </mat-form-field>
+        </div>
+
+        <div formGroupName="receiverAddress" class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Tỉnh</mat-label>
+            <input matInput type="text" formControlName="province" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Quận/Huyện</mat-label>
+            <input matInput type="text" formControlName="district" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phường/Xã</mat-label>
+            <input matInput type="text" formControlName="ward" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Địa chỉ chi tiết</mat-label>
+            <input matInput type="text" formControlName="detailedAddress" required />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Thông Tin Đơn Hàng</h3>
+        <div class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Tên Đơn Hàng</mat-label>
+            <input matInput type="text" formControlName="orderName" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Trọng Lượng (kg)</mat-label>
+            <input matInput type="number" formControlName="orderWeight" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Số Lượng</mat-label>
+            <input matInput type="number" formControlName="orderQuantity" required />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <button mat-raised-button color="primary" type="submit" class="submit-btn" [disabled]="orderForm.invalid">
+        Tạo Đơn Hàng
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>

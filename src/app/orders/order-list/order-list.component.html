@@ -1,0 +1,42 @@
+<mat-tab-group [(selectedIndex)]="selectedTab">
+  <!-- Đơn hàng đã gửi -->
+  <mat-tab label="Đơn hàng đã gửi">
+    <div *ngIf="sentOrders.length > 0; else noOrders">
+      <mat-card *ngFor="let order of sentOrders" class="order-card">
+        <mat-card-content>
+          <p><strong>ID:</strong> {{ order.id }}</p>
+          <p><strong>Người gửi:</strong> {{ order.senderName || 'Không có' }}</p>
+          <p><strong>Người nhận:</strong> {{ order.receiverName || 'Không có' }}</p>
+          <p><strong>Tên đơn hàng:</strong> {{ order.orderName || 'Không có' }}</p>
+          <p><strong>Trọng lượng:</strong> {{ order.orderWeight }} kg</p>
+          <p><strong>Số lượng:</strong> {{ order.orderQuantity }}</p>
+          <p><strong>Phí vận chuyển:</strong> {{ order.shippingCost | currency:'VND' }}</p>
+          <p><strong>Trạng thái:</strong> {{ order.currentStatus || 'Chưa cập nhật' }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-tab>
+
+  <!-- Đơn hàng đã nhận -->
+  <mat-tab label="Đơn hàng đã nhận">
+    <div *ngIf="receivedOrders.length > 0; else noOrders">
+      <mat-card *ngFor="let order of receivedOrders" class="order-card">
+        <mat-card-content>
+          <p><strong>ID:</strong> {{ order.id }}</p>
+          <p><strong>Người gửi:</strong> {{ order.senderName || 'Không có' }}</p>
+          <p><strong>Người nhận:</strong> {{ order.receiverName || 'Không có' }}</p>
+          <p><strong>Tên đơn hàng:</strong> {{ order.orderName || 'Không có' }}</p>
+          <p><strong>Trọng lượng:</strong> {{ order.orderWeight }} kg</p>
+          <p><strong>Số lượng:</strong> {{ order.orderQuantity }}</p>
+          <p><strong>Phí vận chuyển:</strong> {{ order.shippingCost | currency:'VND' }}</p>
+          <p><strong>Trạng thái:</strong> {{ order.currentStatus || 'Chưa cập nhật' }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<!-- Nếu không có đơn hàng nào -->
+<ng-template #noOrders>
+  <p class="no-order-message">Không có đơn hàng nào!</p>
+</ng-template>

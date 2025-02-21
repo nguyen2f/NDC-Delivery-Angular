@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # NDC
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+=======
+# DeliveryManagement
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+>>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
 
 ## Development server
 

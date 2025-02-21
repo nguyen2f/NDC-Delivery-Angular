@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "NDC": {
+=======
+    "delivery-management": {
+>>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/ndc",
+=======
+            "outputPath": "dist/delivery-management",
+>>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,6 +35,10 @@
               }
             ],
             "styles": [
+<<<<<<< HEAD
+=======
+              "src/custom-theme.scss",
+>>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
               "src/styles.css"
             ],
             "scripts": []
@@ -59,10 +71,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "NDC:build:production"
             },
             "development": {
               "buildTarget": "NDC:build:development"
+=======
+              "buildTarget": "delivery-management:build:production"
+            },
+            "development": {
+              "buildTarget": "delivery-management:build:development"
+>>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
             }
           },
           "defaultConfiguration": "development"
@@ -85,6 +104,10 @@
               }
             ],
             "styles": [
+<<<<<<< HEAD
+=======
+              "@angular/material/prebuilt-themes/azure-blue.css",
+>>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
               "src/styles.css"
             ],
             "scripts": []

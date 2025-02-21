@@ -1,0 +1,20 @@
+<h2>Chào mừng bạn đến với hệ thống</h2>
+<p>Số điện thoại: {{ userPhoneNumber }}</p>
+
+<a routerLink="/create-order">Tạo đơn hàng</a> |
+<a routerLink="/orders">Xem đơn hàng</a> |
+<button (click)="logout()">Đăng xuất</button>
+
+
+<div class="dashboard-container">
+  <p>Quản lý đơn hàng của bạn nhanh chóng và hiệu quả!</p>
+
+  <mat-toolbar color="primary">
+    <span>Dashboard</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/create-order">Tạo Đơn Hàng</button>
+    <button mat-button routerLink="/orders">Xem Đơn Hàng</button>
+  </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,13 @@
+.order-card {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.no-order-message {
+  text-align: center;
+  font-size: 16px;
+  color: gray;
+  margin-top: 20px;
+}
