@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "ndc",
-=======
   "name": "delivery-management",
->>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,18 +11,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.0",
-<<<<<<< HEAD
-=======
     "@angular/cdk": "^19.1.5",
->>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
     "@angular/common": "^19.1.0",
     "@angular/compiler": "^19.1.0",
     "@angular/core": "^19.1.0",
     "@angular/forms": "^19.1.0",
-<<<<<<< HEAD
-=======
     "@angular/material": "^19.1.5",
->>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
@@ -35,13 +25,8 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@angular-devkit/build-angular": "^19.1.7",
-    "@angular/cli": "^19.1.7",
-=======
     "@angular-devkit/build-angular": "^19.1.8",
     "@angular/cli": "^19.1.8",
->>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.5.0",
@@ -52,8 +37,4 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.7.2"
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> adc7798 (Hoàn thiện giao diện cơ bản cho web)
